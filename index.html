@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Gerador de Senhas</title>
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <h1 class="title">Gerador de Senhas</h1>
+            <p class="subtitle">Utilize o nosso gerador online para criar uma senha forte
+                e segura.</p>
+        </section>
+
+        <section class="box">
+            <div class="password">
+                <div class="text">
+                    <input type="text" name="password" id="password" />
+                </div>
+                <div class="actions">
+                    <button id="copy2"><img src="copy.svg" alt="Copy" width="42"></button>
+                    <button id="renew"><img src="renew.svg" alt="Again" width="42"></button>
+                </div>
+            </div>
+            <div class="security_indicator">
+                <div 
+                    id="security_indicator_bar" 
+                    class="bar" 
+                ></div>
+            </div>
+        </section>
+
+        <section class="box customize">
+            <h3 class="title">Personalizar</h3>
+            <div class="actions">
+                <div class="password_length">
+                    <p>Tamanho: <span id="password_length_text">16</span></p>
+                    <input 
+                    type="range" 
+                    name="password_length"
+                    class="slider" 
+                    id="password_length"
+                    value ="16"
+                    min="4"
+                    max="64"
+                    /> 
+                </div>
+                <div class="config">
+                    <label  class="checkbox_container">
+                        <span class="text">Maiúsculas</span>
+                        <input type="checkbox" id="uppercase_check" checked />
+                        <span class="checkmark"></span>
+                    </label>
+                    <label  class="checkbox_container">
+                        <span class="text">Números</span>
+                        <input type="checkbox" id="number_check" checked />
+                        <span class="checkmark"></span>
+                    </label>
+                    <label  class="checkbox_container">
+                        <span class="text">Minúsculas</span>
+                        <input type="checkbox" id="lowercase_check" checked/>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label  class="checkbox_container">
+                        <span class="text">Símbolos</span>
+                        <input type="checkbox" id="symbol_check" checked />
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </section>
+    
+        <div class="submit">
+            <button id="copy">Copiar senha</button>
+        </div>
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>
